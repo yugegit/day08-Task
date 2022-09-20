@@ -1,0 +1,54 @@
+var request = new XMLHttpRequest();
+request.open('GET','https://restcountries.com/v3.1/all',true);
+request.send();
+request.Onload = function(){
+    var data = JSON.parse(request.response);
+    const result = data.filter((region) => region===asia);
+    console.log(result);
+   
+}
+
+
+var request = new XMLHttpRequest();
+request.open('GET','https://restcountries.com/v3.1/all',true);
+request.send();
+request.Onload = function(){
+    var data = JSON.parse(request.response);
+    const result = data.filter((population) => population < -200000);
+    console.log(result);
+   
+}
+
+
+
+
+
+var request = new XMLHttpRequest();
+request.open('GET','https://restcountries.com/v3.1/all',true);
+request.send();
+request.Onload = function(){
+    var data = JSON.parse(request.response);
+    const result = data.forEach(element => element ('${this.capital},${this.flag}') );
+
+        console.log(result(data[i].capital,data[i].flag));
+    
+    
+}
+
+
+
+
+
+var request = new XMLHttpRequest();
+request.open('GET','https://restcountries.com/v3.1/all',true);
+request.send();
+request.Onload = function(){
+    let data = JSON.parse(request.response)
+    let answer = data.filter((country) => (country.currencies !== undefined))
+    let result = answer.filter((dollar) => (dollar.currencies[0].name === "USD"))
+    console.log(result);
+    
+    
+}
+
+
